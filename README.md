@@ -1,7 +1,7 @@
 import numpy as np
 
 def gauss_elimination(A, b):
-    n = len(b)
+   n = len(b)
     for i in range(n):
         if A[i][i] == 0.0:
             return None  # Матрица не может быть приведена к треугольному виду
@@ -111,13 +111,12 @@ def input_matrix_and_matrix():
                 print(f"Неверное количество элементов. Должно быть {cols_B} элементов.")
         B.append(row)
 
-    return np.array(A), np.array(B)
-
-Cinnet Mekani😍, [5/22/2024 9:30 PM]
-# Пример использования:
-print("Введите данные для решения СЛАУ:")
-A, B = input_matrix_and_matrix()
-if A is not None and B is not None:
+    return np.array(A), np.array(B)   
+    
+    # Пример использования:
+    print("Введите данные для решения СЛАУ:")
+    A, B = input_matrix_and_matrix()
+    if A is not None and B is not None:
     # Выбор метода решения
     print("Выберите метод решения СЛАУ (1 - Гаусса, 2 - Зейделя, 3 - Крамера, 4 - Интеграции, 5 - Кронекера-Капелли, 6 - Итерационный метод Якоби, 7 - Матричный метод): ")
     method = input()
