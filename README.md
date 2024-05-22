@@ -1,7 +1,7 @@
-import numpy as np
+    import numpy as np
 
-def gauss_elimination(A, b):
-   n = len(b)
+    def gauss_elimination(A, b):
+      n = len(b)
     for i in range(n):
         if A[i][i] == 0.0:
             return None  # Матрица не может быть приведена к треугольному виду
@@ -19,7 +19,7 @@ def gauss_elimination(A, b):
         x[i] = x[i]/A[i][i]
     return x
 
-def jacobi_method(A, b, x0=None, tol=1e-10, max_iter=1000):
+    def jacobi_method(A, b, x0=None, tol=1e-10, max_iter=1000):
     n = len(b)
     if x0 is None:
         x0 = np.zeros(n)
@@ -37,7 +37,7 @@ def jacobi_method(A, b, x0=None, tol=1e-10, max_iter=1000):
             return x_new
     return None  # Метод не сошелся
 
-def cramer_method(A, B):
+    def cramer_method(A, B):
     det_A = np.linalg.det(A)
     n = A.shape[1] 
     m = B.shape[1]  
@@ -50,16 +50,16 @@ def cramer_method(A, B):
         x.append(np.linalg.det(A_copy) / det_A)
     return np.array(x).reshape(n, m)  # Изменить форму x, чтобы она соответствовала форме B
 
-def integration_method(A, b):
+    def integration_method(A, b):
     # Реализация метода интеграции для решения СЛАУ
     pass
 
-def kroncker_capelli_method(A, b):
+    def kroncker_capelli_method(A, b):
     if np.linalg.matrix_rank(A) != np.linalg.matrix_rank(np.hstack((A, b.reshape(-1, 1)))):
         return None  # Система несовместна
     return np.linalg.lstsq(A, b, rcond=None)[0]
 
-def jacobi_iterative_method(A, b, x0=None, tol=1e-10, max_iter=1000):
+    def jacobi_iterative_method(A, b, x0=None, tol=1e-10, max_iter=1000):
     n = len(b)
     if x0 is None:
         x0 = np.zeros(n)
@@ -75,10 +75,10 @@ def jacobi_iterative_method(A, b, x0=None, tol=1e-10, max_iter=1000):
     return None  # Метод не сошелся
 
 
-def matrix_method(A, b):
+    def matrix_method(A, b):
     return np.dot(np.linalg.inv(A), b)
 
-def input_matrix_and_matrix():
+    def input_matrix_and_matrix():
     print("Введите матрицу коэффициентов A:")
     A = []
     rows_A = int(input('Количество строк: '))
