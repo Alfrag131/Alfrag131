@@ -35,8 +35,6 @@ education:
 fields_of_interests:
   [
     "Oil and gas",
-    "Data Science",
-    "Machine Learning",
   ]
 ```
   
