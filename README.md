@@ -35,6 +35,10 @@ education:
 fields_of_interests:
   [
     "Oil and gas",
+    "Ecology/ESG",
+    "Reading",
+    "Knitting"
+
   ]
 ```
   
